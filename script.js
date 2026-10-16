@@ -209,3 +209,40 @@ window.addEventListener("resize", () => {
   resizeCanvas();
   addAmbientParticles();
 });
+
+// --- TÍNH NĂNG MỞ ĐƯỜNG DẪN RIÊNG DÀNH CHO MẸ ---
+window.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const recipient = urlParams.get("to");
+
+  // Nếu trên thanh địa chỉ có ?to=me, thay đổi nội dung bức thư thành dành riêng cho mẹ
+  if (recipient === "me") {
+    const greetingTitle = greetingCard.querySelector("h2") || greetingCard.querySelector("h3") || greetingCard.querySelector(".greeting-title");
+    const greetingBody = greetingCard.querySelector(".greeting-body") || greetingCard.querySelector("p");
+
+    if (greetingTitle) {
+      greetingTitle.textContent = "Gửi Mẹ Yêu Dấu Của Con ❤️";
+    }
+
+    // Bạn có thể tùy chỉnh lại nội dung lời chúc riêng cho mẹ ở đây
+    const customMessage = `
+      <p>Mẹ yêu dấu của con ơi!</p>
+      <p>Nhân ngày Phụ nữ Việt Nam 20/10, con muốn gửi đến mẹ những lời chúc từ tận đáy lòng mình. Cảm ơn mẹ vì đã luôn hy sinh thầm lặng, là vòng tay ấm áp che chở và là điểm tựa vững chắc nhất cho cuộc đời con.</p>
+      <p>Con chỉ mong mẹ luôn dồi dào sức khỏe, bình an, giữ mãi nụ cười rạng rỡ và luôn hạnh phúc bên gia đình mình mỗi ngày. Mẹ chính là người phụ nữ tuyệt vời nhất cuộc đời con!</p>
+      <p style="text-align: right; font-weight: bold; margin-top: 15px;">Con của mẹ kính yêu! 🌸✨</p>
+    `;
+
+    // Thay thế toàn bộ nội dung trong phần hiển thị lời chúc của bức thư
+    const contentContainer = greetingCard.querySelector(".greeting-content") || greetingCard;
+    if (contentContainer) {
+      // Tìm hoặc tạo vùng chứa chữ trong thiệp để cập nhật
+      let textWrapper = greetingCard.querySelector(".custom-letter-text");
+      if (!textWrapper) {
+        textWrapper = document.createElement("div");
+        textWrapper.className = "custom-letter-text";
+        contentContainer.appendChild(textWrapper);
+      }
+      textWrapper.innerHTML = customMessage;
+    }
+  }
+});

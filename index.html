@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3f6">
+  <meta name="description" content="Một lời chúc ngọt ngào dành tặng bạn nhân ngày Phụ nữ Việt Nam 20/10.">
+  <title>Thương gửi bạn — 20/10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas class="petal-canvas" aria-hidden="true"></canvas>
+
+  <main>
+    <section class="screen bouquet-screen is-active" id="bouquet-screen" aria-labelledby="bouquet-title">
+      <div class="bouquet-content">
+        <p class="eyebrow">Một món quà nhỏ dành riêng cho bạn</p>
+        <h1 class="screen-title" id="bouquet-title">Gửi người phụ nữ tuyệt vời</h1>
+        <button class="bouquet-button" id="bouquet-button" type="button" aria-label="Nhấn để bó hoa nở rộ">
+          <span class="bouquet-glow"></span>
+          <svg class="bouquet-art" viewBox="0 0 420 550" role="img" aria-label="Bó hoa hồng pastel cao cấp với giấy gói hồng và nơ trắng">
+            <defs>
+              <linearGradient id="wrapPink" x1=".08" y1="0" x2=".95" y2="1">
+                <stop stop-color="#ffd5d9"/><stop offset=".32" stop-color="#ffb6c1"/><stop offset=".72" stop-color="#ff9ebb"/><stop offset="1" stop-color="#e7879f"/>
+              </linearGradient>
+              <linearGradient id="wrapFold" x1="0" y1="0" x2="1" y2=".3">
+                <stop stop-color="#ffe4e6"/><stop offset=".48" stop-color="#f7a0b2"/><stop offset="1" stop-color="#ffd1d7"/>
+              </linearGradient>
+              <linearGradient id="ribbonWhite" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#fff"/><stop offset=".55" stop-color="#fffaf7"/><stop offset="1" stop-color="#e8d4d3"/>
+              </linearGradient>
+              <radialGradient id="petalPink" cx=".32" cy=".23" r=".86">
+                <stop stop-color="#ffe3e4"/><stop offset=".48" stop-color="#f58fa4"/><stop offset="1" stop-color="#c7496b"/>
+              </radialGradient>
+              <radialGradient id="petalBlush" cx=".32" cy=".23" r=".86">
+                <stop stop-color="#fffaf0"/><stop offset=".53" stop-color="#f3c1be"/><stop offset="1" stop-color="#d48692"/>
+              </radialGradient>
+              <radialGradient id="petalIvory" cx=".32" cy=".23" r=".86">
+                <stop stop-color="#fffef7"/><stop offset=".6" stop-color="#f6e7d8"/><stop offset="1" stop-color="#d0a39d"/>
+              </radialGradient>
+              <linearGradient id="leafGreen" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#d9e7a6"/><stop offset=".5" stop-color="#91b96f"/><stop offset="1" stop-color="#4e7956"/>
+              </linearGradient>
+              <symbol id="rosePink" viewBox="-50 -50 100 100">
+                <path d="M-38 3Q-47-14-30-28Q-15-43 1-34Q17-48 32-31Q49-16 37 1Q47 18 29 33Q12 48-4 37Q-25 48-37 29Q-49 15-38 3Z" fill="url(#petalPink)"/>
+                <path d="M-34-4Q-35-27-12-32Q3-36 10-22Q28-35 37-16Q43 1 24 10Q31 28 12 35Q-7 42-14 22Q-34 25-34-4Z" fill="#ed8298"/>
+                <path d="M-24-8Q-24-25-7-26Q5-27 10-14Q25-19 29-5Q33 9 18 15Q17 29 2 28Q-12 29-14 14Q-29 10-24-8Z" fill="#f6a6b1"/>
+                <path d="M-13-5Q-12-17 0-17Q12-18 14-7Q24-1 17 10Q11 21-1 16Q-12 23-19 12Q-25 1-13-5Z" fill="#d75073"/>
+                <path d="M-6-4Q-2-11 6-8Q14-3 8 5Q5 13-4 9Q-12 6-6-4Z" fill="#ffd3d3"/>
+                <path d="M-40-4Q-36-28-14-34M-28 30Q-12 43 2 38" fill="none" stroke="#fff4ef" stroke-width="2.5" stroke-linecap="round"/>
+              </symbol>
+              <symbol id="roseBlush" viewBox="-50 -50 100 100">
+                <path d="M-38 3Q-47-14-30-28Q-15-43 1-34Q17-48 32-31Q49-16 37 1Q47 18 29 33Q12 48-4 37Q-25 48-37 29Q-49 15-38 3Z" fill="url(#petalBlush)"/>
+                <path d="M-34-4Q-35-27-12-32Q3-36 10-22Q28-35 37-16Q43 1 24 10Q31 28 12 35Q-7 42-14 22Q-34 25-34-4Z" fill="#e9a2a7"/>
+                <path d="M-24-8Q-24-25-7-26Q5-27 10-14Q25-19 29-5Q33 9 18 15Q17 29 2 28Q-12 29-14 14Q-29 10-24-8Z" fill="#f8d1c9"/>
+                <path d="M-13-5Q-12-17 0-17Q12-18 14-7Q24-1 17 10Q11 21-1 16Q-12 23-19 12Q-25 1-13-5Z" fill="#d68d99"/>
+                <path d="M-6-4Q-2-11 6-8Q14-3 8 5Q5 13-4 9Q-12 6-6-4Z" fill="#fff5e7"/>
+                <path d="M-40-4Q-36-28-14-34M-28 30Q-12 43 2 38" fill="none" stroke="#fffdf6" stroke-width="2.5" stroke-linecap="round"/>
+              </symbol>
+              <symbol id="roseIvory" viewBox="-50 -50 100 100">
+                <path d="M-38 3Q-47-14-30-28Q-15-43 1-34Q17-48 32-31Q49-16 37 1Q47 18 29 33Q12 48-4 37Q-25 48-37 29Q-49 15-38 3Z" fill="url(#petalIvory)"/>
+                <path d="M-34-4Q-35-27-12-32Q3-36 10-22Q28-35 37-16Q43 1 24 10Q31 28 12 35Q-7 42-14 22Q-34 25-34-4Z" fill="#f1e0d4"/>
+                <path d="M-24-8Q-24-25-7-26Q5-27 10-14Q25-19 29-5Q33 9 18 15Q17 29 2 28Q-12 29-14 14Q-29 10-24-8Z" fill="#fff9ed"/>
+                <path d="M-13-5Q-12-17 0-17Q12-18 14-7Q24-1 17 10Q11 21-1 16Q-12 23-19 12Q-25 1-13-5Z" fill="#e7c6b9"/>
+                <path d="M-6-4Q-2-11 6-8Q14-3 8 5Q5 13-4 9Q-12 6-6-4Z" fill="#fffef5"/>
+                <path d="M-40-4Q-36-28-14-34M-28 30Q-12 43 2 38" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              </symbol>
+              <symbol id="tinyBloom" viewBox="-14 -14 28 28">
+                <g fill="#fffdf5"><ellipse cy="-5.8" rx="3" ry="6"/><ellipse cy="-5.8" rx="3" ry="6" transform="rotate(45)"/><ellipse cy="-5.8" rx="3" ry="6" transform="rotate(90)"/><ellipse cy="-5.8" rx="3" ry="6" transform="rotate(135)"/></g>
+                <circle r="2.7" fill="#e8c273"/>
+              </symbol>
+            </defs>
+            <g class="bouquet-stems" fill="none" stroke="#789961" stroke-width="2.5" stroke-linecap="round">
+              <path d="M207 342Q163 221 91 109Q65 70 43 48"/><path d="M214 342Q258 215 319 112Q340 76 372 53"/>
+              <path d="M207 329Q120 251 42 204"/><path d="M216 329Q293 247 381 205"/><path d="M210 315Q201 186 210 72"/>
+            </g>
+            <g class="bouquet-leaves" fill="url(#leafGreen)" stroke="#66865a" stroke-width="1">
+              <path d="M80 99Q47 84 44 60Q70 62 80 99Z"/><path d="M88 111Q56 111 43 92Q67 82 88 111Z"/>
+              <path d="M99 129Q70 119 65 96Q89 99 99 129Z"/><path d="M109 145Q78 146 62 128Q83 113 109 145Z"/>
+              <path d="M125 168Q95 158 90 135Q114 138 125 168Z"/><path d="M137 186Q108 187 91 169Q112 154 137 186Z"/>
+              <path d="M338 105Q365 82 370 58Q345 62 338 105Z"/><path d="M327 122Q358 111 372 91Q348 82 327 122Z"/>
+              <path d="M313 145Q343 132 350 109Q326 114 313 145Z"/><path d="M300 166Q330 165 348 146Q328 131 300 166Z"/>
+              <path d="M282 190Q310 178 318 155Q294 159 282 190Z"/><path d="M270 210Q299 210 317 193Q297 177 270 210Z"/>
+              <path d="M52 200Q28 186 27 167Q48 172 52 200Z"/><path d="M67 211Q38 216 22 202Q40 187 67 211Z"/>
+              <path d="M365 201Q390 181 392 161Q370 169 365 201Z"/><path d="M350 215Q380 217 397 201Q379 184 350 215Z"/>
+              <path d="M198 126Q177 103 183 82Q202 95 198 126Z"/><path d="M219 128Q237 101 230 81Q211 96 219 128Z"/>
+              <path d="M188 157Q166 139 168 118Q190 128 188 157Z"/><path d="M228 157Q248 137 245 117Q224 128 228 157Z"/>
+            </g>
+            <path d="M31 211Q92 226 210 229Q327 226 389 207L256 374Q242 390 246 417L281 520Q211 545 139 520L174 417Q179 390 164 374Z" fill="url(#wrapPink)" stroke="#e38c9e" stroke-width="2"/>
+            <path d="M32 212Q99 236 177 237L204 376L174 415Q133 337 95 292Z" fill="#ffd1d8" opacity=".82"/>
+            <path d="M388 209Q320 235 243 237L216 376L246 415Q286 340 326 292Z" fill="#f49caf" opacity=".72"/>
+            <path d="M210 235Q228 318 210 376Q193 432 148 521Q194 540 237 529Q218 458 211 376Q205 306 210 235Z" fill="url(#wrapFold)" opacity=".92"/>
+            <path d="M35 215Q84 239 143 300M386 212Q337 239 277 300" fill="none" stroke="#fff0ed" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+            <path d="M32 207Q92 217 147 226Q209 235 273 224Q337 213 389 204L349 265Q316 306 260 356Q232 380 210 390Q186 378 159 354Q102 304 68 263Z" fill="#fffaf6" stroke="#f2d9d2" stroke-width="2"/>
+            <path d="M36 210Q83 220 130 231L105 288Q73 255 36 210ZM386 207Q338 223 292 232L317 288Q351 252 386 207Z" fill="#fff" opacity=".78"/>
+            <path d="M68 221Q85 191 102 171M111 238Q126 208 145 187M316 240Q302 207 285 185M354 220Q338 194 321 170M175 251Q164 223 159 205M251 250Q263 221 270 201" fill="none" stroke="#8eaa70" stroke-width="1.8"/>
+            <g class="bouquet-fillers" aria-hidden="true">
+              <use href="#tinyBloom" x="57" y="202" width="24" height="24"/><use href="#tinyBloom" x="79" y="181" width="21" height="21"/>
+              <use href="#tinyBloom" x="95" y="166" width="19" height="19"/><use href="#tinyBloom" x="105" y="224" width="20" height="20"/>
+              <use href="#tinyBloom" x="128" y="200" width="22" height="22"/><use href="#tinyBloom" x="140" y="181" width="18" height="18"/>
+              <use href="#tinyBloom" x="305" y="222" width="21" height="21"/><use href="#tinyBloom" x="284" y="194" width="21" height="21"/>
+              <use href="#tinyBloom" x="275" y="179" width="18" height="18"/><use href="#tinyBloom" x="340" y="202" width="22" height="22"/>
+              <use href="#tinyBloom" x="315" y="168" width="20" height="20"/><use href="#tinyBloom" x="152" y="197" width="19" height="19"/>
+              <use href="#tinyBloom" x="263" y="192" width="20" height="20"/>
+            </g>
+            <g class="bouquet-roses">
+              <use href="#roseIvory" x="61" y="137" width="95" height="95"/><use href="#roseBlush" x="105" y="91" width="98" height="98"/>
+              <use href="#rosePink" x="157" y="61" width="103" height="103"/><use href="#roseIvory" x="214" y="92" width="96" height="96"/>
+              <use href="#rosePink" x="268" y="133" width="96" height="96"/><use href="#roseBlush" x="36" y="188" width="83" height="83"/>
+              <use href="#rosePink" x="96" y="174" width="92" height="92"/><use href="#roseIvory" x="154" y="153" width="106" height="106"/>
+              <use href="#rosePink" x="230" y="176" width="96" height="96"/><use href="#roseIvory" x="311" y="190" width="76" height="76"/>
+              <use href="#rosePink" x="67" y="231" width="78" height="78"/><use href="#roseBlush" x="125" y="232" width="88" height="88"/>
+              <use href="#roseIvory" x="195" y="231" width="89" height="89"/><use href="#rosePink" x="271" y="231" width="79" height="79"/>
+            </g>
+            <g class="bouquet-ribbon">
+              <path d="M174 362Q210 377 246 362L235 393Q210 405 185 393Z" fill="url(#ribbonWhite)" stroke="#e9d4d3" stroke-width="1.5"/>
+              <path d="M194 377Q160 352 149 371Q142 388 193 398Q155 417 165 438Q174 454 205 399Z" fill="url(#ribbonWhite)" stroke="#e6d1d1" stroke-width="2"/>
+              <path d="M226 378Q262 349 274 369Q282 386 231 399Q272 416 260 440Q250 456 219 400Z" fill="url(#ribbonWhite)" stroke="#e6d1d1" stroke-width="2"/>
+              <path d="M201 393Q181 443 190 478Q194 490 201 481L214 402ZM218 395Q236 448 228 482Q224 493 218 480L207 402Z" fill="url(#ribbonWhite)" stroke="#e6d1d1" stroke-width="1.5"/>
+              <path d="M150 371Q165 385 190 391M272 370Q256 386 231 392" fill="none" stroke="#fff" stroke-width="3"/>
+              <circle cx="210" cy="385" r="10" fill="#fffdf9" stroke="#e6cecf" stroke-width="2"/>
+              <path d="M208 382C201 375 196 383 208 392C220 383 215 375 208 382Z" fill="#df9daa"/>
+              <text x="166" y="425" fill="#bd8990" font-family="Georgia,serif" font-size="7" letter-spacing="1" transform="rotate(-65 166 425)">with love</text>
+            </g>
+          </svg>
+        </button>
+        <button class="hint-pill" id="bouquet-hint" type="button">✨ Nhấn vào bó hoa ✨</button>
+      </div>
+    </section>
+
+    <section class="screen calendar-screen" id="calendar-screen" aria-labelledby="calendar-title" aria-hidden="true">
+      <div class="calendar-card">
+        <p class="eyebrow">♥♥♥</p>
+        <h2 id="calendar-title">Tháng Mười <span>2026</span></h2>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Thứ Hai</span><span>Thứ Ba</span><span>Thứ Tư</span><span>Thứ Năm</span><span>Thứ Sáu</span><span>Thứ Bảy</span><span>Chủ Nhật</span>
+        </div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Lịch tháng 10 năm 2026"></div>
+        <p class="calendar-note">Một ngày thật đặc biệt đang chờ bạn <span>♡</span></p>
+      </div>
+    </section>
+
+    <section class="screen letter-screen" id="letter-screen" aria-labelledby="letter-title" aria-hidden="true">
+      <div class="letter-scene">
+        <div class="heart-backdrop" aria-hidden="true">♥</div>
+        <button class="envelope-button" id="envelope-button" type="button" aria-label="Mở phong thư yêu thương">
+          <span class="envelope">
+            <span class="envelope-letter-peek">♡</span>
+            <span class="envelope-body"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-seal">♥</span>
+          </span>
+          <span class="envelope-hint">Bạn có một lời nhắn — chạm để mở</span>
+        </button>
+        <article class="greeting-card" id="greeting-card" aria-hidden="true">
+          <div class="card-decoration card-decoration-top">✿</div>
+          <p class="card-kicker">Thân gửi bạn</p>
+          <h2 id="letter-title">Nhân ngày Phụ nữ Việt Nam 20/10</h2>
+          <div class="card-divider"><span>♡</span></div>
+          <p class="greeting-message">Chúc bạn một ngày ngập tràn niềm vui, tiếng cười và những bất ngờ ngọt ngào nhất. Cảm ơn bạn vì luôn mang đến sự ấm áp, năng lượng tích cực và sự duyên dáng cho cuộc sống xung quanh. Mong rằng trên hành trình phía trước, bạn sẽ luôn giữ vững nụ cười rạng rỡ, tự tin tỏa sáng theo cách riêng của mình, gặt hái thật nhiều thành công và luôn được yêu thương trọn vẹn. Chúc mọi dự định và ước mơ của bạn đều sẽ sớm trở thành hiện thực. Một lần nữa, chúc bạn có một ngày 20/10 thật đáng nhớ và hạnh phúc!</p>
+          <p class="card-signoff"> <span>♥♥♥</span></p>
+          <div class="card-decoration card-decoration-bottom">✿</div>
+        </article>
+      </div>
+      <button class="back-button" id="back-button" type="button">Quay lại</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

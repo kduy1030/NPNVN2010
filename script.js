@@ -225,8 +225,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 2. Nội dung riêng dành cho mẹ
     const customMessage = `
-      <p style="margin-top: 10px;">Mẹ yêu dấu của con ơi!</p>
-      <p>Nhân ngày Phụ nữ Việt Nam 20/10, con muốn gửi đến mẹ những lời chúc từ tận đáy lòng mình. Cảm ơn mẹ vì đã luôn hy sinh thầm lặng, là vòng tay ấm áp che chở và là điểm tựa vững chắc nhất cho cuộc đời con.</p>
+      <p style="margin-top: 10px;">Mẹ ơi!</p>
+      <p>Nhân ngày Phụ nữ Việt Nam 20/10, con muốn gửi đến mẹ những lời chúc tốt đẹp nhất. Cảm ơn mẹ vì đã luôn hy sinh thầm lặng, là vòng tay ấm áp che chở và là điểm tựa vững chắc nhất cho cuộc đời con.</p>
       <p>Con chỉ mong mẹ luôn dồi dào sức khỏe, bình an, giữ mãi nụ cười rạng rỡ và luôn hạnh phúc bên gia đình mình mỗi ngày. Mẹ chính là người phụ nữ tuyệt vời nhất cuộc đời con!</p>
       <p style="text-align: right; font-weight: bold; margin-top: 20px; color: #d81b60;">Con của mẹ kính yêu! 🌸✨</p>
     `;

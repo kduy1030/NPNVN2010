@@ -10,14 +10,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
 <body>
   <canvas class="petal-canvas" aria-hidden="true"></canvas>
+  <audio id="background-music" src="river-flows-in-you.mp3" autoplay loop preload="auto"></audio>
+  <p class="music-status" id="music-status" role="status" aria-live="polite"></p>
 
   <main>
-    <section class="screen bouquet-screen is-active" id="bouquet-screen" aria-labelledby="bouquet-title">
+    <section class="screen universe-screen is-active" id="universe-screen" aria-labelledby="universe-title" aria-hidden="false">
+      <div class="universe-stage" id="universe-stage">
+        <div class="universe-copy">
+          <h1 id="universe-title">Món quà nho nhỏ dành cho bạn</h1>
+          <button class="universe-enter" id="universe-enter" type="button">✨ Chạm vào trái tim để khám phá ✨</button>
+          <p class="universe-status" id="universe-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen bouquet-screen" id="bouquet-screen" aria-labelledby="bouquet-title" aria-hidden="true">
       <div class="bouquet-content">
-        <p class="eyebrow">Một món quà nhỏ dành riêng cho bạn</p>
+        <p class="eyebrow">✿✿✿</p>
         <h1 class="screen-title" id="bouquet-title">Gửi người phụ nữ tuyệt vời</h1>
         <button class="bouquet-button" id="bouquet-button" type="button" aria-label="Nhấn để bó hoa nở rộ">
           <span class="bouquet-glow"></span>
@@ -169,6 +182,6 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

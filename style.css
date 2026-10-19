@@ -49,21 +49,7 @@ button:focus-visible {
   pointer-events: none;
 }
 
-.music-status {
-  position: fixed;
-  z-index: 8;
-  right: max(12px, env(safe-area-inset-right));
-  bottom: max(10px, env(safe-area-inset-bottom));
-  max-width: 240px;
-  margin: 0;
-  padding: 5px 9px;
-  border-radius: 8px;
-  background: rgba(72, 14, 43, .72);
-  color: #fff5f8;
-  font-size: .68rem;
-  text-align: right;
-  text-shadow: 0 1px 5px rgba(50, 10, 28, .8);
-}
+
 
 main,
 .screen {
@@ -782,4 +768,19 @@ main,
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
+}
+
+/* --- DÒNG CHỮ BẢN QUYỀN GÓC DƯỚI BÊN PHẢI --- */
+.copyright-tag {
+    position: fixed;
+    bottom: 12px;
+    right: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(216, 27, 96, 0.45); /* Màu hồng khớp chủ đề, có độ mờ nhẹ */
+    z-index: 9999;                  /* Đảm bảo luôn nằm trên các lớp nội dung */
+    pointer-events: none;           /* Không cản trở người dùng click vào nội dung bên dưới */
+    user-select: none;              /* Tránh vô tình bôi đen văn bản khi thao tác */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
 }
